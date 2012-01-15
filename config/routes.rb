@@ -1,4 +1,9 @@
 Auth::Application.routes.draw do
+ #  get "users/new"
+  get "sign_up" => "users#new", :as => "sign_up"
+  root :to => "users#new"
+  resources :users
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

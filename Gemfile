@@ -7,6 +7,18 @@ gem 'rails', '3.1.3'
 
 gem 'sqlite3'
 
+gem "bcrypt-ruby", :require => "bcrypt"
+
+# from http://stackoverflow.com/a/6323518
+gem 'execjs'
+gem 'therubyracer'
+
+# from http://stackoverflow.com/a/6410904
+group :production do
+  gem 'therubyracer-heroku'
+  gem 'pg'
+end
+
 
 # Gems used only for assets and not required
 # in production environments by default.
